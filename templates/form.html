@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From</title>
+
+</head>
+
+<body>
+    {% if error %}
+    {{error}}
+    {%endif %}
+
+    {% if success %}
+    <p> Form Submitted Sucessfully</p>
+    {% endif %}
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        Name
+        <input type="text" name="name" maxlength="100" required id="id_name">
+        <br>
+
+        Email
+        <input type="email" name="email" maxlength="254" required id="id_email">
+        <br>
+
+        Gender
+
+        <select name="gender" id="gender">
+            <option value="Male">Male</option>
+            <option value="Fmale">Female</option>
+        </select>
+        <br>
+
+        Img
+        <input type="file" name="img" accept="image/*" required id="id_img">
+        <br>
+<!-- 
+        Date    
+        <input type="date" name="date" id="date"> -->
+<br>
+        Phone
+        <input type="text" name="phone" required id="id_phone">
+        <br>
+        Radio
+        <select name="radio" id="id_radio">
+            <option value="unknown" selected>Unknown</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>

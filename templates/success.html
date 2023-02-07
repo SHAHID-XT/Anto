@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucess</title>
+</head>
+<body>
+    <p>Name : {{user.name}}</p>    
+    <p>Email : {{user.email}}</p>    
+    <p>Gender : {{user.gender}}</p>    
+    <p>Phone : {{user.phone}}</p>    
+    <p>radio : {{user.radio}}</p>    
+    <img src="{% url 'home' %}{{user.img}}" alt="" width="500">
+
+</html>
